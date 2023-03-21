@@ -30,7 +30,7 @@
 
 # 📖 Metrics Webapp<a name="about-project"></a>
 
-**Metrics Webapp** Is a web application built with react and redux and COINCAP API 2.0. Users can view crypto currencies and mspecific info about that crypto currency.
+**Metrics Webapp** Is a web application built with react and redux and COINCAP API 2.0. Users can view crypto currencies and specific info about that crypto currency.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -67,7 +67,7 @@ To get this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/ambrose-kibet/metric-webapp.git
+  git clone https://github.com/ambrose-kibet/metrics-webapp.git
 ```
 
 ### Running the app
