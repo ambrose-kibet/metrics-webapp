@@ -1,13 +1,192 @@
-body {
+@import url('https://fonts.cdnfonts.com/css/gill-sans');
+@import url('https://fonts.googleapis.com/css?family=Lato:400');
+
+*,
+::after,
+::before {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-size: 100%;
+} /* 16px */
+
+:root {
+  --clr-primary: #3a86ff;
+  --clr-grey: #6d6875;
+  --clr-danger: #d90429;
+  --clr-background: #3a86ff;
+
+  /* shadow */
+  --shadow-1: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-2: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-3: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-4: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-5: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --max-width: 800px;
+  --border-radius: 0.25rem;
+  --transition: all 0.3s ease-in-out;
+}
+
+body {
+  background: var(--clr-background);
+  font-family: 'Gill Sans', 'lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #fff;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: 'Gill Sans', 'lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+
+.section-container {
+  max-width: var(--max-width);
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.26rem;
+}
+
+.hero-text {
+  margin: 0px auto;
+}
+
+.home-btn {
+  text-decoration: none;
+  color: white;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.home-intros {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 10rem;
+}
+
+.crypto-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0.5rem;
+  box-shadow: var(--shadow-2);
+  position: relative;
+  text-decoration: none;
+  color: white;
+}
+
+.arrow-left {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: white;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crypto-img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crpto-img {
+  width: 10rem;
+  height: 10rem;
+  background: transparent;
+}
+
+.crpto-body,
+.crypto-name,
+.crypto-rate,
+.home-info > h2,
+.home-info > h4 {
+  text-align: right;
+  text-transform: capitalize;
+  margin: 0px;
+  padding: 0.5rem 0px;
+}
+.home-div {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-div img {
+  margin-left: auto;
+}
+
+.home-info > h2,
+.home-info > h4 {
+  text-transform: capitalize;
+  margin: auto 0px;
+  padding: 0px 1rem;
+  text-align: left;
+}
+
+.space {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
 }
