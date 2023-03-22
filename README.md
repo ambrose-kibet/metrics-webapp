@@ -54,6 +54,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://crypto-metrics-app.netlify.app/)
+- [video Demo Link](https://www.loom.com/share/5dc075337f404265aa1220bea4db0b0d)
 
 <!-- GETTING STARTED -->
 
