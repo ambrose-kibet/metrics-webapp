@@ -5,7 +5,11 @@ import { Link } from 'react-router-dom';
 const SingleCurrency = ({
   symbolImg, name, rate, id,
 }) => (
-  <Link to={`/${id.toLowerCase()}`} className="crypto-card">
+  <Link
+    to={`/${id.toLowerCase()}`}
+    className="crypto-card"
+    data-testid="home-container"
+  >
     <div className="crypto-img-container">
       <img src={symbolImg} alt={name} className="crpto-img" />
     </div>

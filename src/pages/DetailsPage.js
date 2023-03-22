@@ -36,6 +36,7 @@ const DetailsPage = () => {
           </h4>
         </article>
       </div>
+      <h3> Crypto Breakdown</h3>
       <DetailsComponent title="symbol" item={singleCrypto?.symbol} />
       <DetailsComponent
         title="change Percent 24Hr"

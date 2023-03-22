@@ -14,7 +14,11 @@ const DetailsComponent = ({ title, item }) => (
 );
 
 DetailsComponent.propTypes = {
-  title: PropTypes.string.isRequired,
-  item: PropTypes.string.isRequired,
+  title: PropTypes.string,
+  item: PropTypes.string,
+};
+DetailsComponent.defaultProps = {
+  title: 'title',
+  item: '0',
 };
 export default DetailsComponent;
