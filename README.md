@@ -53,7 +53,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link coming soon]()
+- [Live Demo Link](https://crypto-metrics-app.netlify.app/)
 
 <!-- GETTING STARTED -->
 
