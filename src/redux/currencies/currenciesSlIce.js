@@ -78,7 +78,7 @@ const currencies = createSlice({
         name,
         rank,
         id,
-        symbol,
+        symbol: symbol.toLowerCase(),
         supply,
         maxSupply,
         priceUsd,

@@ -1,8 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
+
 import { getSingleCrypto } from '../redux/currencies/currenciesSlIce';
 import HeroComponent from '../components/HeroComponent';
+import DetailsComponent from '../components/DetailsComponent';
 
 const DetailsPage = () => {
   const { singleCrypto } = useSelector((state) => state.currencies);
@@ -12,14 +14,13 @@ const DetailsPage = () => {
   useEffect(() => {
     dispatch(getSingleCrypto(id));
   }, [dispatch, id]);
-  console.log(singleCrypto);
   return (
     <section className="section-container">
       <HeroComponent info="single crypto info" />
       <div className="home-intros space">
         <div className="crypto-img-container">
           <img
-            src={`https://coinicons-api.vercel.app/api/icon/${singleCrypto?.symbol.toLowerCase()}`}
+            src={`https://coinicons-api.vercel.app/api/icon/${singleCrypto?.symbol}`}
             alt={singleCrypto?.name}
             className="crpto-img"
           />
@@ -35,6 +36,13 @@ const DetailsPage = () => {
           </h4>
         </article>
       </div>
+      <DetailsComponent title="symbol" item={singleCrypto?.symbol} />
+      <DetailsComponent
+        title="change Percent 24Hr"
+        item={singleCrypto?.changePercent24Hr}
+      />
+      <DetailsComponent title="price Usd" item={singleCrypto?.priceUsd} />
+      <DetailsComponent title="supply" item={singleCrypto?.supply} />
     </section>
   );
 };

@@ -190,3 +190,26 @@ small,
   justify-content: space-between;
   padding: 1rem 0.5rem;
 }
+
+.details-container {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  align-items: center;
+}
+
+.details-container h3 {
+  text-transform: capitalize;
+}
+
+.details-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details-info h4 {
+  margin: 0px;
+}
+.btn-arrow {
+  position: relative;
+}
