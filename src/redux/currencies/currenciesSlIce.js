@@ -5,6 +5,7 @@ const initialState = {
   curencies: [],
   isLoading: false,
   singleCrypto: {},
+  searchParams: '',
 };
 
 export const getCrypto = createAsyncThunk(
@@ -37,6 +38,13 @@ export const getSingleCrypto = createAsyncThunk(
 const currencies = createSlice({
   name: 'currencies',
   initialState,
+  reducers: {
+    filterItems: (state, { payload }) => {
+      const newItems = state.curencies.filter((item) => item.name.includes(payload.toLowerCase()));
+      return { ...state, curencies: newItems };
+    },
+    updateSearch: (state, { payload }) => ({ ...state, searchParams: payload }),
+  },
 
   extraReducers: (builder) => {
     builder.addCase(getCrypto.pending, (state) => ({
@@ -47,7 +55,7 @@ const currencies = createSlice({
       const newItems = payload.map(({
         id, symbol, rank, name,
       }) => ({
-        name,
+        name: name.toLowerCase(),
         rank,
         id,
         symbol,
@@ -92,5 +100,5 @@ const currencies = createSlice({
     }));
   },
 });
-
+export const { filterItems, updateSearch } = currencies.actions;
 export default currencies.reducer;

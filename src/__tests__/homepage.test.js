@@ -50,7 +50,7 @@ describe('Homepage component', () => {
   });
 
   it('dispatches the getCrypto action on mount', () => {
-    expect(store.dispatch).toHaveBeenCalledTimes(1);
+    expect(store.dispatch).toHaveBeenCalledTimes(3);
     expect(store.dispatch).toHaveBeenCalled();
   });
 });

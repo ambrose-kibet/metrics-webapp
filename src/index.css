@@ -216,3 +216,38 @@ small,
 .btn-arrow {
   position: relative;
 }
+
+.home-container :nth-child(3n) {
+  background: #0666f78a;
+}
+
+.style :nth-child(odd) {
+  background: #0666f78a;
+}
+
+.style > .details-container :nth-child(odd) {
+  background: unset;
+}
+
+.home-container .crypto-card :nth-child(3n) {
+  background: unset;
+}
+
+.hide {
+  display: none;
+}
+
+.input-text {
+  margin: auto;
+  height: 1.75rem;
+  padding: 0.25rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: white;
+}
+
+.input-text::placeholder {
+  color: white;
+  font-size: 1rem;
+}

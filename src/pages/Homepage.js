@@ -15,7 +15,7 @@ const Homepage = () => {
 
   return (
     <section className="section-container">
-      <HeroComponent info="common cryptocurrencies" />
+      <HeroComponent info="common" />
       <div className="home-intros">
         <div className="crypto-img-container " />
         <article className="home-info">

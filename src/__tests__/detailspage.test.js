@@ -53,7 +53,7 @@ describe('DetailsPage', () => {
   });
 
   it('should dispatch the getSingleCrypto action', async () => {
-    await waitFor(() => expect(store.dispatch).toHaveBeenCalledTimes(1));
+    await waitFor(() => expect(store.dispatch).toHaveBeenCalledTimes(3));
     expect(store.dispatch).toHaveBeenCalled();
   });
 

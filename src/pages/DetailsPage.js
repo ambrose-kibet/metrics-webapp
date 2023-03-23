@@ -37,13 +37,15 @@ const DetailsPage = () => {
         </article>
       </div>
       <h3> Crypto Breakdown</h3>
-      <DetailsComponent title="symbol" item={singleCrypto?.symbol} />
-      <DetailsComponent
-        title="change Percent 24Hr"
-        item={singleCrypto?.changePercent24Hr}
-      />
-      <DetailsComponent title="price Usd" item={singleCrypto?.priceUsd} />
-      <DetailsComponent title="supply" item={singleCrypto?.supply} />
+      <div className="style">
+        <DetailsComponent title="symbol" item={singleCrypto?.symbol} />
+        <DetailsComponent
+          title="change Percent 24Hr"
+          item={singleCrypto?.changePercent24Hr}
+        />
+        <DetailsComponent title="price Usd" item={singleCrypto?.priceUsd} />
+        <DetailsComponent title="supply" item={singleCrypto?.supply} />
+      </div>
     </section>
   );
 };
