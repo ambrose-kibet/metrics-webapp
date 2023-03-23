@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { FaChevronLeft } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
@@ -13,6 +13,8 @@ const HeroComponent = ({ info }) => {
   const dispatch = useDispatch();
   const { searchParams } = useSelector((state) => state.currencies);
 
+  const search = useRef(null);
+
   useEffect(() => {
     if (!searchParams) {
       dispatch(getCrypto());
@@ -20,6 +22,10 @@ const HeroComponent = ({ info }) => {
 
     dispatch(filterItems(searchParams));
   }, [searchParams, dispatch]);
+
+  useEffect(() => {
+    search.current.focus();
+  }, []);
 
   return (
     <div className="hero">
@@ -30,6 +36,7 @@ const HeroComponent = ({ info }) => {
         className={info === 'common' ? 'input-text' : 'hide'}
         type="text"
         value={searchParams}
+        ref={search}
         placeholder="search crypto ie. bitcoin"
         onChange={(e) => dispatch(updateSearch(e.target.value))}
       />
